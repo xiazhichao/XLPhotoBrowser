@@ -136,7 +136,7 @@
  */
 @property (nonatomic, strong) UIImage *pageDotImage;
 
-
+@property (nonatomic, assign) BOOL isSingleTapEnble;
 #pragma mark    ----------------------
 #pragma mark    XLPhotoBrowser控制接口
 

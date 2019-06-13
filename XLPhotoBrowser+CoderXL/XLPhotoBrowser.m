@@ -810,6 +810,9 @@
  */
 - (void)zoomingScrollView:(XLZoomingScrollView *)zoomingScrollView singleTapDetected:(UITapGestureRecognizer *)singleTap
 {
+    if (!self.isSingleTapEnble) {
+        return;
+    }
     [UIView animateWithDuration:0.15 animations:^{
         self.savaImageTipLabel.alpha = 0.0;
         self.indicatorView.alpha = 0.0;
