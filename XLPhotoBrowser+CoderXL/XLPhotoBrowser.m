@@ -1069,7 +1069,7 @@
     browser.imageCount = images.count;
     browser.currentImageIndex = currentImageIndex;
     browser.images = images;
-    [browser show];
+//    [browser show];
     return browser;
 }
 
