@@ -104,7 +104,10 @@
  */
 - (void)clickImage:(UITapGestureRecognizer *)tap
 {
-    [XLPhotoBrowser showPhotoBrowserWithCurrentImageIndex:tap.view.tag imageCount:self.images.count datasource:self];
+    XLPhotoBrowser *view =[XLPhotoBrowser showPhotoBrowserWithCurrentImageIndex:tap.view.tag imageCount:self.images.count datasource:self];
+    [view setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [view show];
+    [self.view addSubview:view];
 }
 
 #pragma mark    -   XLPhotoBrowserDatasource

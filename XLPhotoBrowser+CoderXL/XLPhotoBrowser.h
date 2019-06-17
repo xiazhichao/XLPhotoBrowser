@@ -178,6 +178,8 @@
  *  进入图片浏览器
  */
 - (void)show;
+
+- (void)showWindow;
 /**
  *  退出
  */

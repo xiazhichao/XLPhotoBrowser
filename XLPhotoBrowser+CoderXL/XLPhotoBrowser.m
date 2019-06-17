@@ -933,7 +933,7 @@
     browser.imageCount = imageCount;
     browser.currentImageIndex = currentImageIndex;
     browser.datasource = datasource;
-    [browser show];
+//    [browser show];
     return browser;
 }
 
@@ -951,7 +951,7 @@
 //    [self show];
 //}
 
-- (void)show
+- (void)showWindow
 {
     if (self.imageCount <= 0) {
         return;
@@ -968,6 +968,22 @@
     [self.photoBrowserWindow.rootViewController.view addSubview:self];
     [self.photoBrowserWindow makeKeyAndVisible];
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    [self iniaialUI];
+}
+
+- (void)show
+{
+    if (self.imageCount <= 0) {
+        return;
+    }
+    if (self.currentImageIndex >= self.imageCount) {
+        self.currentImageIndex = self.imageCount - 1;
+    }
+    if (self.currentImageIndex < 0) {
+        self.currentImageIndex = 0;
+    }
+    
+    self.alpha = 0.0;
     [self iniaialUI];
 }
 
