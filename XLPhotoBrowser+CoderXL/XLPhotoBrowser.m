@@ -438,7 +438,7 @@
         default:
             break;
     }
-    CGFloat y = self.xl_height - size.height - 10;
+    CGFloat y = self.xl_height - size.height - 10 - self.pageControlOffsetY;
     self.pageControl.frame = CGRectMake(x, y, size.width, size.height);
 }
 

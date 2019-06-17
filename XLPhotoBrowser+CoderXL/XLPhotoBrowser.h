@@ -123,6 +123,8 @@
  *  当前分页控件小圆标颜色
  */
 @property (nonatomic, strong) UIColor *currentPageDotColor;
+
+@property (nonatomic, assign) float pageControlOffsetY;
 /**
  *  其他分页控件小圆标颜色
  */
